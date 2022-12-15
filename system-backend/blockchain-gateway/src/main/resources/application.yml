@@ -1,0 +1,34 @@
+####################################################
+# Fabric Gateway Configuration
+####################################################
+server:
+  port: 9001
+
+spring:
+  profiles:
+    active: "resource, datasource, framework"
+
+fabric:
+  connection-config-path: "D://Java/Code/lxl114/system-backend/blockchain-gateway/src/main/resources/connection.yml"
+  channel-name: "supervision-channel"
+  chaincode-name: "mycode"
+
+  regulator-certificate-path: "D://Java/Code/lxl114/system-backend/blockchain-gateway/src/main/resources/keyfiles/peerOrganizations/regulator.supervision.com/users/Admin@regulator.supervision.com/msp/signcerts/Admin@regulator.supervision.com-cert.pem"
+  regulator-private-key-path: "D://Java/Code/lxl114/system-backend/blockchain-gateway/src/main/resources/keyfiles/peerOrganizations/regulator.supervision.com/users/Admin@regulator.supervision.com/msp/keystore/priv_sk"
+  regulator-wallet-dir: "D://Java/Code/lxl114/system-backend/blockchain-gateway/src/main/resources/wallets/regulator.supervision.com"
+
+  manufacturer-certificate-path: "D://Java/Code/lxl114/system-backend/blockchain-gateway/src/main/resources/keyfiles/peerOrganizations/manufacturer.supervision.com/users/Admin@manufacturer.supervision.com/msp/signcerts/Admin@manufacturer.supervision.com-cert.pem"
+  manufacturer-private-key-path: "D://Java/Code/lxl114/system-backend/blockchain-gateway/src/main/resources/keyfiles/peerOrganizations/manufacturer.supervision.com/users/Admin@manufacturer.supervision.com/msp/keystore/priv_sk"
+  manufacturer-wallet-dir: "D://Java/Code/lxl114/system-backend/blockchain-gateway/src/main/resources/wallets/manufacturer.supervision.com"
+
+  distributor-certificate-path: "D://Java/Code/lxl114/system-backend/blockchain-gateway/src/main/resources/keyfiles/peerOrganizations/distributor.supervision.com/users/Admin@distributor.supervision.com/msp/signcerts/Admin@distributor.supervision.com-cert.pem"
+  distributor-private-key-path: "D://Java/Code/lxl114/system-backend/blockchain-gateway/src/main/resources/keyfiles/peerOrganizations/distributor.supervision.com/users/Admin@distributor.supervision.com/msp/keystore/priv_sk"
+  distributor-wallet-dir: "D://Java/Code/lxl114/system-backend/blockchain-gateway/src/main/resources/wallets/distributor.supervision.com"
+
+  provider-certificate-path: "D://Java/Code/lxl114/system-backend/blockchain-gateway/src/main/resources/keyfiles/peerOrganizations/provider.supervision.com/users/Admin@provider.supervision.com/msp/signcerts/Admin@provider.supervision.com-cert.pem"
+  provider-private-key-path: "D://Java/Code/lxl114/system-backend/blockchain-gateway/src/main/resources/keyfiles/peerOrganizations/provider.supervision.com/users/Admin@provider.supervision.com/msp/keystore/priv_sk"
+  provider-wallet-dir: "D://Java/Code/lxl114/system-backend/blockchain-gateway/src/main/resources/wallets/provider.supervision.com"
+
+  consumer-certificate-path: "D://Java/Code/lxl114/system-backend/blockchain-gateway/src/main/resources/keyfiles/peerOrganizations/consumer.supervision.com/users/Admin@consumer.supervision.com/msp/signcerts/Admin@consumer.supervision.com-cert.pem"
+  consumer-private-key-path: "D://Java/Code/lxl114/system-backend/blockchain-gateway/src/main/resources/keyfiles/peerOrganizations/consumer.supervision.com/users/Admin@consumer.supervision.com/msp/keystore/priv_sk"
+  consumer-wallet-dir: "D://Java/Code/lxl114/system-backend/blockchain-gateway/src/main/resources/wallets/consumer.supervision.com"

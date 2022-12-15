@@ -1,0 +1,4 @@
+keyUsage = critical,digitalSignature
+basicConstraints = critical,CA:FALSE
+subjectAltName=IP: 192.168.48.128,DNS:Admin@consumer.supervision.com,DNS:Admin@consumer-supervision-com,DNS:localhost,IP:127.0.0.1
+authorityKeyIdentifier = keyid,issuer

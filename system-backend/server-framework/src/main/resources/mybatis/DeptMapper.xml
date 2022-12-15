@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.server_framework.web.rbac.mapper.DeptMapper">
+    <resultMap id="deptResult" type="Department">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="leader" column="leader"/>
+        <result property="email" column="email"/>
+        <result property="address" column="address"/>
+        <result property="createTime" column="create_time"/>
+        <result property="creator" column="creator"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="updater" column="updater"/>
+    </resultMap>
+
+    <select id="selectDeptsAll" resultMap="deptResult">
+        SELECT * FROM ss_department
+    </select>
+
+    <select id="selectDeptById" resultMap="deptResult">
+        SELECT * FROM ss_department WHERE id = #{id}
+    </select>
+
+    <insert id="insertDept" parameterType="Department" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO ss_department (name, type, leader, email, address, create_time, creator)
+                    VALUES (#{name}, #{type}, #{leader}, #{email}, #{address}, sysdate(), #{creator})
+    </insert>
+
+    <update id="updateDept" parameterType="Department">
+        UPDATE ss_department SET name = #{name}, type = #{type}, leader = #{leader},
+                           email = #{email}, address = #{address},
+                           update_time = sysdate(), updater = #{updater}
+                        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteDeptById">
+        DELETE FROM ss_department WHERE id = #{id}
+    </delete>
+</mapper>

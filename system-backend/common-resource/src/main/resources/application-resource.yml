@@ -1,0 +1,9 @@
+####################################################
+# Configuration Properties about Common Resource
+####################################################
+system:
+  name: "Medical Supplies Supervision System"
+  version: "0.0.1"
+  copyright: "2022 lxl114"
+  addressEnabled: true
+  baseFilePath: "D://Java/Code/lxl114/system-backend-server/server-interface/src/main/resources/static"

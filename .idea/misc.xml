@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/system-backend-server/pom.xml" />
+        <option value="$PROJECT_DIR$/system-backend-server/auth_management/pom.xml" />
+        <option value="$PROJECT_DIR$/system-backend-server/sys_base/pom.xml" />
+        <option value="$PROJECT_DIR$/system-backend-server/control_center/pom.xml" />
+        <option value="$PROJECT_DIR$/system-backend-server/server_basement/pom.xml" />
+        <option value="$PROJECT_DIR$/system-backend-server/server_base/pom.xml" />
+        <option value="$PROJECT_DIR$/system-backend-server/auth_mgmt/pom.xml" />
+        <option value="$PROJECT_DIR$/system-backend-server/server_framework/pom.xml" />
+        <option value="$PROJECT_DIR$/system-backend-server/system-tool/pom.xml" />
+        <option value="$PROJECT_DIR$/system-backend-server/auth-mgmt/pom.xml" />
+        <option value="$PROJECT_DIR$/system-backend-server/server-tool/pom.xml" />
+        <option value="$PROJECT_DIR$/system-backend-server/common-tool/pom.xml" />
+        <option value="$PROJECT_DIR$/system-backend-server/common-resource/pom.xml" />
+        <option value="$PROJECT_DIR$/system-backend-server/supplies-trace/pom.xml" />
+        <option value="$PROJECT_DIR$/system-blockchain-network/fabric-sdk/pom.xml" />
+        <option value="$PROJECT_DIR$/system-blockchain-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/system-blockchain-network/blockchain-chaincode/pom.xml" />
+        <option value="$PROJECT_DIR$/system-blockchain-network/blockchain-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/system-blockchain-network/fabric-chaincode/pom.xml" />
+        <option value="$PROJECT_DIR$/system-backend/pom.xml" />
+        <option value="$PROJECT_DIR$/system-blockchain/fabric-chaincode/pom.xml" />
+        <option value="$PROJECT_DIR$/system-blockchain/blockchain-chaincode/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="PWA">
+    <option name="wasEnabledAtLeastOnce" value="true" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" default="true" project-jdk-name="16" project-jdk-type="JavaSDK" />
+</project>

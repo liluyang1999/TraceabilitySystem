@@ -1,0 +1,20 @@
+####################################################
+# Configuration Properties about Framework
+####################################################
+token:
+  header: "Authorization"
+  secret: "lxl114"
+
+spring:
+  redis:
+    host: "127.0.0.1"
+    port: 6379
+
+mybatis:
+  type-aliases-package: "com.example.server_framework.web.rbac.entity"
+  mapper-locations: "classpath:mybatis/*.xml"
+  configuration:
+    default-executor-type: simple
+    cache-enabled: true
+    use-generated-keys: true
+    map-underscore-to-camel-case: true

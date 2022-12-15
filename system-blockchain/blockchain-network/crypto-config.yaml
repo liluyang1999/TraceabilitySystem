@@ -1,0 +1,80 @@
+---
+OrdererOrgs:
+  - Name: supervision.com
+    Domain: supervision.com
+    Specs:
+      - Hostname: orderer
+        SANS:
+          - 192.168.48.128
+
+PeerOrgs:
+  - Name: consumer.supervision.com
+    Domain: consumer.supervision.com
+    EnableNodeOUs: true
+    CA:
+      Hostname: ca
+      CommonName: ca.consumer.supervision.com
+      Country: US
+      Province: North Carolina
+      Locality: Raleigh
+    Specs:
+      - Hostname: peer0
+        CommonName: peer0.consumer.supervision.com
+        SANS:
+          - 192.168.48.128
+  - Name: distributor.supervision.com
+    Domain: distributor.supervision.com
+    EnableNodeOUs: true
+    CA:
+      Hostname: ca
+      CommonName: ca.distributor.supervision.com
+      Country: US
+      Province: North Carolina
+      Locality: Raleigh
+    Specs:
+      - Hostname: peer0
+        CommonName: peer0.distributor.supervision.com
+        SANS:
+          - 192.168.48.128
+  - Name: manufacturer.supervision.com
+    Domain: manufacturer.supervision.com
+    EnableNodeOUs: true
+    CA:
+      Hostname: ca
+      CommonName: ca.manufacturer.supervision.com
+      Country: US
+      Province: North Carolina
+      Locality: Raleigh
+    Specs:
+      - Hostname: peer0
+        CommonName: peer0.manufacturer.supervision.com
+        SANS:
+          - 192.168.48.128
+  - Name: provider.supervision.com
+    Domain: provider.supervision.com
+    EnableNodeOUs: true
+    CA:
+      Hostname: ca
+      CommonName: ca.provider.supervision.com
+      Country: US
+      Province: North Carolina
+      Locality: Raleigh
+    Specs:
+      - Hostname: peer0
+        CommonName: peer0.provider.supervision.com
+        SANS:
+          - 192.168.48.128
+  - Name: regulator.supervision.com
+    Domain: regulator.supervision.com
+    EnableNodeOUs: true
+    CA:
+      Hostname: ca
+      CommonName: ca.regulator.supervision.com
+      Country: US
+      Province: North Carolina
+      Locality: Raleigh
+    Specs:
+      - Hostname: peer0
+        CommonName: peer0.regulator.supervision.com
+        SANS:
+          - 192.168.48.128

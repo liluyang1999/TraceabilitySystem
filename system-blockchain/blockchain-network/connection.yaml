@@ -1,0 +1,143 @@
+---
+"name": "7f8e0c49c1_net"
+"x-type": "hlfv1"
+"version": "1.0.0"
+"client":
+  "organization": regulator.supervision.com
+  "connection":
+    "timeout":
+      "peer":
+        "endorser": "300"
+"organizations":
+  "consumer.supervision.com":
+    "mspid": "consumer-supervision-com"
+    "peers":
+    - "peer0.consumer.supervision.com"
+    "orderers": []
+    "certificateAuthorities":
+    - "ca.consumer.supervision.com"
+  "distributor.supervision.com":
+    "mspid": "distributor-supervision-com"
+    "peers":
+    - "peer0.distributor.supervision.com"
+    "orderers": []
+    "certificateAuthorities":
+    - "ca.distributor.supervision.com"
+  "manufacturer.supervision.com":
+    "mspid": "manufacturer-supervision-com"
+    "peers":
+    - "peer0.manufacturer.supervision.com"
+    "orderers": []
+    "certificateAuthorities":
+    - "ca.manufacturer.supervision.com"
+  "provider.supervision.com":
+    "mspid": "provider-supervision-com"
+    "peers":
+    - "peer0.provider.supervision.com"
+    "orderers": []
+    "certificateAuthorities":
+    - "ca.provider.supervision.com"
+  "regulator.supervision.com":
+    "mspid": "regulator-supervision-com"
+    "peers":
+    - "peer0.regulator.supervision.com"
+    "orderers": []
+    "certificateAuthorities":
+    - "ca.regulator.supervision.com"
+  "supervision.com":
+    "mspid": "supervision-com"
+    "peers": []
+    "orderers":
+    - "orderer.supervision.com"
+
+"orderers":
+  "orderer.supervision.com":
+    "url": "grpcs://192.168.48.128:7015"
+    "grpcOptions":
+      "ssl-target-name-override": "orderer.supervision.com"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIICujCCAmCgAwIBAgIUTrZ/RVrEhDBE8gUwpEisrySrx74wCgYIKoZIzj0EAwIw\ncjELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMRgwFgYDVQQKDA9zdXBlcnZpc2lvbi5jb20xHjAcBgNVBAMMFXRs\nc2NhLnN1cGVydmlzaW9uLmNvbTAeFw0yMjA5MDEyMjA4MDlaFw0zMjA4MjkyMjA4\nMDlaMHIxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEQMA4G\nA1UEBwwHUmFsZWlnaDEYMBYGA1UECgwPc3VwZXJ2aXNpb24uY29tMR4wHAYDVQQD\nDBV0bHNjYS5zdXBlcnZpc2lvbi5jb20wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNC\nAAQ22c+NgocZoNkpMGKNmHqgH0tbCikdISYrpwkzLGnpA7k3H1sHOU0PpBJz394G\nAkk7OMKCIJgQeUwYM2Am9MM9o4HTMIHQMB0GA1UdDgQWBBQlflbslpYphEB+CdHQ\nou6GSNAzSDAfBgNVHSMEGDAWgBQlflbslpYphEB+CdHQou6GSNAzSDAPBgNVHRMB\nAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAQYI\nKwYBBQUHAwIwTgYDVR0RBEcwRYcEwKgwgIIVdGxzY2Euc3VwZXJ2aXNpb24uY29t\nghV0bHNjYS1zdXBlcnZpc2lvbi1jb22CCWxvY2FsaG9zdIcEfwAAATAKBggqhkjO\nPQQDAgNIADBFAiBkWzl0x/CSQwfUYAKbe1oqbMbE6PbYrBBh/Jy/9+eIpQIhAKlC\nUZa2MdbU1Y05VAwacJKe/HH/7qOMK6R5yREFuwWH\n-----END CERTIFICATE-----"
+
+"peers":
+  "peer0.regulator.supervision.com":
+    "url": "grpcs://192.168.48.128:7005"
+    "grpcOptions":
+      "ssl-target-name-override": "peer0.regulator.supervision.com"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIIC9zCCAp6gAwIBAgIUQ3lKwYx5bjZpQRgoLPl9N3feJt4wCgYIKoZIzj0EAwIw\ngYYxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEQMA4GA1UE\nBwwHUmFsZWlnaDEiMCAGA1UECgwZcmVndWxhdG9yLnN1cGVydmlzaW9uLmNvbTEo\nMCYGA1UEAwwfdGxzY2EucmVndWxhdG9yLnN1cGVydmlzaW9uLmNvbTAeFw0yMjA5\nMDEyMjA3NTZaFw0zMjA4MjkyMjA3NTZaMIGGMQswCQYDVQQGEwJVUzEXMBUGA1UE\nCAwOTm9ydGggQ2Fyb2xpbmExEDAOBgNVBAcMB1JhbGVpZ2gxIjAgBgNVBAoMGXJl\nZ3VsYXRvci5zdXBlcnZpc2lvbi5jb20xKDAmBgNVBAMMH3Rsc2NhLnJlZ3VsYXRv\nci5zdXBlcnZpc2lvbi5jb20wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASlz5Kd\n3QtSkNdNmMSq18e0HIcMR0YF/6KUKg5vJ6KqFb6oxbbXPsZ16S1ox2e8TVtJEC6n\n8MCPd2rCxGwyu6Xeo4HnMIHkMB0GA1UdDgQWBBSaNaGmStRkksn+Cc6AmTJxstIE\nlDAfBgNVHSMEGDAWgBSaNaGmStRkksn+Cc6AmTJxstIElDAPBgNVHRMBAf8EBTAD\nAQH/MA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUH\nAwIwYgYDVR0RBFswWYcEwKgwgIIfdGxzY2EucmVndWxhdG9yLnN1cGVydmlzaW9u\nLmNvbYIfdGxzY2EtcmVndWxhdG9yLXN1cGVydmlzaW9uLWNvbYIJbG9jYWxob3N0\nhwR/AAABMAoGCCqGSM49BAMCA0cAMEQCIGt9EMYh7mMGuB8ros4JDMl6PZwvAHcs\n3GFnvZvA+BF9AiBSxKFx62+52TiDHwF0m+VhMBNSDBC2T4YyQvaM083QHg==\n-----END CERTIFICATE-----"
+  "peer0.manufacturer.supervision.com":
+    "url": "grpcs://192.168.48.128:7006"
+    "grpcOptions":
+      "ssl-target-name-override": "peer0.manufacturer.supervision.com"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIIDCTCCArCgAwIBAgIUWAvehBzBy5xjlSdVINcozNYFccUwCgYIKoZIzj0EAwIw\ngYwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEQMA4GA1UE\nBwwHUmFsZWlnaDElMCMGA1UECgwcbWFudWZhY3R1cmVyLnN1cGVydmlzaW9uLmNv\nbTErMCkGA1UEAwwidGxzY2EubWFudWZhY3R1cmVyLnN1cGVydmlzaW9uLmNvbTAe\nFw0yMjA5MDEyMjA3MzNaFw0zMjA4MjkyMjA3MzNaMIGMMQswCQYDVQQGEwJVUzEX\nMBUGA1UECAwOTm9ydGggQ2Fyb2xpbmExEDAOBgNVBAcMB1JhbGVpZ2gxJTAjBgNV\nBAoMHG1hbnVmYWN0dXJlci5zdXBlcnZpc2lvbi5jb20xKzApBgNVBAMMInRsc2Nh\nLm1hbnVmYWN0dXJlci5zdXBlcnZpc2lvbi5jb20wWTATBgcqhkjOPQIBBggqhkjO\nPQMBBwNCAATGpYmqNiPrUuwQUduC6VT/uD+YXXIebYBSe1p//l1QUu8SMwnO3L56\nOKBrbjEUcg45PDqeccHZ195t8od/RMgco4HtMIHqMB0GA1UdDgQWBBQj9vqKJRwo\nmRLUjajqy4FqRc9qJzAfBgNVHSMEGDAWgBQj9vqKJRwomRLUjajqy4FqRc9qJzAP\nBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEF\nBQcDAQYIKwYBBQUHAwIwaAYDVR0RBGEwX4cEwKgwgIIidGxzY2EubWFudWZhY3R1\ncmVyLnN1cGVydmlzaW9uLmNvbYIidGxzY2EtbWFudWZhY3R1cmVyLXN1cGVydmlz\naW9uLWNvbYIJbG9jYWxob3N0hwR/AAABMAoGCCqGSM49BAMCA0cAMEQCIHlphgxg\nThouolU/VmZGUl6oKk5SHYgp64oKCkjcIeRgAiAbnY8bd/gGWG5kP8UUalZYEbE5\n4c9fgOUD73sXZ0dwdA==\n-----END CERTIFICATE-----"
+  "peer0.distributor.supervision.com":
+    "url": "grpcs://192.168.48.128:7007"
+    "grpcOptions":
+      "ssl-target-name-override": "peer0.distributor.supervision.com"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIIDBDCCAqqgAwIBAgIURdTMPlqlA5nXA1TwjOAlQzRoVTswCgYIKoZIzj0EAwIw\ngYoxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEQMA4GA1UE\nBwwHUmFsZWlnaDEkMCIGA1UECgwbZGlzdHJpYnV0b3Iuc3VwZXJ2aXNpb24uY29t\nMSowKAYDVQQDDCF0bHNjYS5kaXN0cmlidXRvci5zdXBlcnZpc2lvbi5jb20wHhcN\nMjIwOTAxMjIwNzIwWhcNMzIwODI5MjIwNzIwWjCBijELMAkGA1UEBhMCVVMxFzAV\nBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQHDAdSYWxlaWdoMSQwIgYDVQQK\nDBtkaXN0cmlidXRvci5zdXBlcnZpc2lvbi5jb20xKjAoBgNVBAMMIXRsc2NhLmRp\nc3RyaWJ1dG9yLnN1cGVydmlzaW9uLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEH\nA0IABJOwr9xLby2KRO8rQsyNgI7Jl4Jzej/RpdjkMiOTGwlC+nLd9wPzc4++Y7Oa\npmaTZyQUd9uWx5EyA4NrIJoDmVSjgeswgegwHQYDVR0OBBYEFLLj+5x3QfRzIfYp\n5M/lBg/1DAE7MB8GA1UdIwQYMBaAFLLj+5x3QfRzIfYp5M/lBg/1DAE7MA8GA1Ud\nEwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMB\nBggrBgEFBQcDAjBmBgNVHREEXzBdhwTAqDCAgiF0bHNjYS5kaXN0cmlidXRvci5z\ndXBlcnZpc2lvbi5jb22CIXRsc2NhLWRpc3RyaWJ1dG9yLXN1cGVydmlzaW9uLWNv\nbYIJbG9jYWxob3N0hwR/AAABMAoGCCqGSM49BAMCA0gAMEUCIQCN6BIvbvVg3Po1\nLhwFIZ9up+erG9Ge9SuDZV6GmakSbQIgA8+RM50VYlegFZsTWhNe1X8TVhGdNeZi\n2bB+uBOyOHk=\n-----END CERTIFICATE-----"
+  "peer0.provider.supervision.com":
+    "url": "grpcs://192.168.48.128:7008"
+    "grpcOptions":
+      "ssl-target-name-override": "peer0.provider.supervision.com"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIIC8TCCApigAwIBAgIUKvEijxOJeVHibwKs1CO0YQ3MrCEwCgYIKoZIzj0EAwIw\ngYQxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEQMA4GA1UE\nBwwHUmFsZWlnaDEhMB8GA1UECgwYcHJvdmlkZXIuc3VwZXJ2aXNpb24uY29tMScw\nJQYDVQQDDB50bHNjYS5wcm92aWRlci5zdXBlcnZpc2lvbi5jb20wHhcNMjIwOTAx\nMjIwNzQ0WhcNMzIwODI5MjIwNzQ0WjCBhDELMAkGA1UEBhMCVVMxFzAVBgNVBAgM\nDk5vcnRoIENhcm9saW5hMRAwDgYDVQQHDAdSYWxlaWdoMSEwHwYDVQQKDBhwcm92\naWRlci5zdXBlcnZpc2lvbi5jb20xJzAlBgNVBAMMHnRsc2NhLnByb3ZpZGVyLnN1\ncGVydmlzaW9uLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABLu9R1DIDjeU\n9RxrxoRI9HHy82xTlR3LMuClLGMru2bsEjB85bpTUCTyjDpzFWUW2zTdxeZUTfkJ\n7D6xo+KzAfOjgeUwgeIwHQYDVR0OBBYEFB/0e8qE9klf12sUaYPgEM8GuOZLMB8G\nA1UdIwQYMBaAFB/0e8qE9klf12sUaYPgEM8GuOZLMA8GA1UdEwEB/wQFMAMBAf8w\nDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjBg\nBgNVHREEWTBXhwTAqDCAgh50bHNjYS5wcm92aWRlci5zdXBlcnZpc2lvbi5jb22C\nHnRsc2NhLXByb3ZpZGVyLXN1cGVydmlzaW9uLWNvbYIJbG9jYWxob3N0hwR/AAAB\nMAoGCCqGSM49BAMCA0cAMEQCIEQcUXDxKqzGsIcjmNSyM+ALWnAQO9xYAWHXAoq0\nGtDtAiAD0RrZzYW8kCuDY1AAiTZPjiFnYfCOV5hQFztRx62JiA==\n-----END CERTIFICATE-----"
+  "peer0.consumer.supervision.com":
+    "url": "grpcs://192.168.48.128:7009"
+    "grpcOptions":
+      "ssl-target-name-override": "peer0.consumer.supervision.com"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIIC8zCCApigAwIBAgIUMDbMz3+Pn7pQEVmQojCQCptFwwcwCgYIKoZIzj0EAwIw\ngYQxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEQMA4GA1UE\nBwwHUmFsZWlnaDEhMB8GA1UECgwYY29uc3VtZXIuc3VwZXJ2aXNpb24uY29tMScw\nJQYDVQQDDB50bHNjYS5jb25zdW1lci5zdXBlcnZpc2lvbi5jb20wHhcNMjIwOTAx\nMjIwNzA4WhcNMzIwODI5MjIwNzA4WjCBhDELMAkGA1UEBhMCVVMxFzAVBgNVBAgM\nDk5vcnRoIENhcm9saW5hMRAwDgYDVQQHDAdSYWxlaWdoMSEwHwYDVQQKDBhjb25z\ndW1lci5zdXBlcnZpc2lvbi5jb20xJzAlBgNVBAMMHnRsc2NhLmNvbnN1bWVyLnN1\ncGVydmlzaW9uLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABKvUhZz5/4rQ\n8Xti/YOtjjFKVJAUzevs9gi4H2T92+iiQN25ShbH76ZefQfHaeKbHm4M5eB+FHYm\nrBb4emiayxejgeUwgeIwHQYDVR0OBBYEFLhfL2uEFJvqgDBFC2aHhc+qkW8uMB8G\nA1UdIwQYMBaAFLhfL2uEFJvqgDBFC2aHhc+qkW8uMA8GA1UdEwEB/wQFMAMBAf8w\nDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjBg\nBgNVHREEWTBXhwTAqDCAgh50bHNjYS5jb25zdW1lci5zdXBlcnZpc2lvbi5jb22C\nHnRsc2NhLWNvbnN1bWVyLXN1cGVydmlzaW9uLWNvbYIJbG9jYWxob3N0hwR/AAAB\nMAoGCCqGSM49BAMCA0kAMEYCIQDyl1sWxMbnkWHn8aTX5MbXz2sUphh77cOBLme8\nXQNiwAIhAIzky+EhLM+WgZeE5Jws9lXz3cx8OOMEJZRfoIOeFyXO\n-----END CERTIFICATE-----"
+
+"certificateAuthorities":
+  "ca.regulator.supervision.com":
+    "url": "https://192.168.48.128:7000"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIIC7TCCApKgAwIBAgIUX3TKBZFXLV4IsUBAhKjuog1NBN0wCgYIKoZIzj0EAwIw\ngYMxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEQMA4GA1UE\nBwwHUmFsZWlnaDEiMCAGA1UECgwZcmVndWxhdG9yLnN1cGVydmlzaW9uLmNvbTEl\nMCMGA1UEAwwcY2EucmVndWxhdG9yLnN1cGVydmlzaW9uLmNvbTAeFw0yMjA5MDEy\nMjA3NTZaFw0zMjA4MjkyMjA3NTZaMIGDMQswCQYDVQQGEwJVUzEXMBUGA1UECAwO\nTm9ydGggQ2Fyb2xpbmExEDAOBgNVBAcMB1JhbGVpZ2gxIjAgBgNVBAoMGXJlZ3Vs\nYXRvci5zdXBlcnZpc2lvbi5jb20xJTAjBgNVBAMMHGNhLnJlZ3VsYXRvci5zdXBl\ncnZpc2lvbi5jb20wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAQcaB3LK/TIZUrD\n4ONx9fp2RP1vqzS6HVCiOXnLxoCXDp8m2BqHz5Pbqw7eysxw48nWItQXBt496J8a\nZxQs7U8jo4HhMIHeMB0GA1UdDgQWBBQo7qTbPaMzn+Jk7N8tlo1TMblUVzAfBgNV\nHSMEGDAWgBQo7qTbPaMzn+Jk7N8tlo1TMblUVzAPBgNVHRMBAf8EBTADAQH/MA4G\nA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwXAYD\nVR0RBFUwU4cEwKgwgIIcY2EucmVndWxhdG9yLnN1cGVydmlzaW9uLmNvbYIcY2Et\ncmVndWxhdG9yLXN1cGVydmlzaW9uLWNvbYIJbG9jYWxob3N0hwR/AAABMAoGCCqG\nSM49BAMCA0kAMEYCIQC1s7fH1GFu2QiytEIBq6V0DVaTNnvKe11i16YvyjuMTAIh\nAILVxFcaYtZECSMN9BoozkgYN4mI+wRLvK3LjquidAo0\n-----END CERTIFICATE-----"
+    "httpOptions":
+      "verify": "false"
+    "caName": "ca"
+    "registrar":
+      "enrollId": "admin"
+      "enrollSecret": "adminpw"
+  "ca.manufacturer.supervision.com":
+    "url": "https://192.168.48.128:7001"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIIC/jCCAqSgAwIBAgIUNyWt3OR5npA6sDRjuDAUGOL5hd0wCgYIKoZIzj0EAwIw\ngYkxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEQMA4GA1UE\nBwwHUmFsZWlnaDElMCMGA1UECgwcbWFudWZhY3R1cmVyLnN1cGVydmlzaW9uLmNv\nbTEoMCYGA1UEAwwfY2EubWFudWZhY3R1cmVyLnN1cGVydmlzaW9uLmNvbTAeFw0y\nMjA5MDEyMjA3MzJaFw0zMjA4MjkyMjA3MzJaMIGJMQswCQYDVQQGEwJVUzEXMBUG\nA1UECAwOTm9ydGggQ2Fyb2xpbmExEDAOBgNVBAcMB1JhbGVpZ2gxJTAjBgNVBAoM\nHG1hbnVmYWN0dXJlci5zdXBlcnZpc2lvbi5jb20xKDAmBgNVBAMMH2NhLm1hbnVm\nYWN0dXJlci5zdXBlcnZpc2lvbi5jb20wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNC\nAAQ1k0k4lT/PyZdX/FIvbOvyLvAtNu+OaZGjY8dxYyzlks9iiJ12jCbKWLYNJ4he\nwtenGsc5Od+qToIImxnR9xqyo4HnMIHkMB0GA1UdDgQWBBSZx0BbnVBs7OYBj11E\nvTrJ/uJqPTAfBgNVHSMEGDAWgBSZx0BbnVBs7OYBj11EvTrJ/uJqPTAPBgNVHRMB\nAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAQYI\nKwYBBQUHAwIwYgYDVR0RBFswWYcEwKgwgIIfY2EubWFudWZhY3R1cmVyLnN1cGVy\ndmlzaW9uLmNvbYIfY2EtbWFudWZhY3R1cmVyLXN1cGVydmlzaW9uLWNvbYIJbG9j\nYWxob3N0hwR/AAABMAoGCCqGSM49BAMCA0gAMEUCIQCIvx8U8B0r8F3BUHyatVJ1\nfhniv94TQdtNcbc9T/f9OgIgNAofJtgH5VnZlddh9DBJbVF8PpQwQ06kjVB3QiO4\nrzw=\n-----END CERTIFICATE-----"
+    "httpOptions":
+      "verify": "false"
+    "caName": "ca"
+    "registrar":
+      "enrollId": "admin"
+      "enrollSecret": "adminpw"
+  "ca.distributor.supervision.com":
+    "url": "https://192.168.48.128:7002"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIIC9zCCAp6gAwIBAgIUaDh9lw+NlfHbOSZ7lfOy7lEQbdYwCgYIKoZIzj0EAwIw\ngYcxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEQMA4GA1UE\nBwwHUmFsZWlnaDEkMCIGA1UECgwbZGlzdHJpYnV0b3Iuc3VwZXJ2aXNpb24uY29t\nMScwJQYDVQQDDB5jYS5kaXN0cmlidXRvci5zdXBlcnZpc2lvbi5jb20wHhcNMjIw\nOTAxMjIwNzIwWhcNMzIwODI5MjIwNzIwWjCBhzELMAkGA1UEBhMCVVMxFzAVBgNV\nBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQHDAdSYWxlaWdoMSQwIgYDVQQKDBtk\naXN0cmlidXRvci5zdXBlcnZpc2lvbi5jb20xJzAlBgNVBAMMHmNhLmRpc3RyaWJ1\ndG9yLnN1cGVydmlzaW9uLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABNac\nQSPkJS9xVwpYE0/LmdqiRyWCpgPHK6fgZkrscok2lJovGDHgc99o3g1I0zuuqWwv\nDMnJysvxC0REvcViES2jgeUwgeIwHQYDVR0OBBYEFHt7+4MMXjqmrPY0z/1amN/x\nOhuzMB8GA1UdIwQYMBaAFHt7+4MMXjqmrPY0z/1amN/xOhuzMA8GA1UdEwEB/wQF\nMAMBAf8wDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEF\nBQcDAjBgBgNVHREEWTBXhwTAqDCAgh5jYS5kaXN0cmlidXRvci5zdXBlcnZpc2lv\nbi5jb22CHmNhLWRpc3RyaWJ1dG9yLXN1cGVydmlzaW9uLWNvbYIJbG9jYWxob3N0\nhwR/AAABMAoGCCqGSM49BAMCA0cAMEQCIE9bo1r17ObNlslRIvCfnKWJdr9R9Zv8\nm14AMQPQotjJAiABuPzttczjTIB3JhvW7Dx4HzS4m64vK8UeZX/h2eQ7oA==\n-----END CERTIFICATE-----"
+    "httpOptions":
+      "verify": "false"
+    "caName": "ca"
+    "registrar":
+      "enrollId": "admin"
+      "enrollSecret": "adminpw"
+  "ca.provider.supervision.com":
+    "url": "https://192.168.48.128:7003"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIIC5zCCAoygAwIBAgIUdBwAoj8iCGONpqQ3dxvUb/7bGNwwCgYIKoZIzj0EAwIw\ngYExCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEQMA4GA1UE\nBwwHUmFsZWlnaDEhMB8GA1UECgwYcHJvdmlkZXIuc3VwZXJ2aXNpb24uY29tMSQw\nIgYDVQQDDBtjYS5wcm92aWRlci5zdXBlcnZpc2lvbi5jb20wHhcNMjIwOTAxMjIw\nNzQ0WhcNMzIwODI5MjIwNzQ0WjCBgTELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5v\ncnRoIENhcm9saW5hMRAwDgYDVQQHDAdSYWxlaWdoMSEwHwYDVQQKDBhwcm92aWRl\nci5zdXBlcnZpc2lvbi5jb20xJDAiBgNVBAMMG2NhLnByb3ZpZGVyLnN1cGVydmlz\naW9uLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABK92G2zlb5P6SJaquj/O\nbfPQszJz5LGU6OLDEuedFe/OOuL8TWapLF72qpq8oQsfFyMOLB/JcJCE5EK7A11+\niBCjgd8wgdwwHQYDVR0OBBYEFIM8VMX8mY3NozsfggiCOiG++affMB8GA1UdIwQY\nMBaAFIM8VMX8mY3NozsfggiCOiG++affMA8GA1UdEwEB/wQFMAMBAf8wDgYDVR0P\nAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjBaBgNVHREE\nUzBRhwTAqDCAghtjYS5wcm92aWRlci5zdXBlcnZpc2lvbi5jb22CG2NhLXByb3Zp\nZGVyLXN1cGVydmlzaW9uLWNvbYIJbG9jYWxob3N0hwR/AAABMAoGCCqGSM49BAMC\nA0kAMEYCIQDUYcHYq+8X0zoQkmACtfIPyMnYPIGYpiv42V7KLIfq4gIhAPSACwc8\nOnkz1nblPMi8jEKryVvIEreCH26UJIMbVGaS\n-----END CERTIFICATE-----"
+    "httpOptions":
+      "verify": "false"
+    "caName": "ca"
+    "registrar":
+      "enrollId": "admin"
+      "enrollSecret": "adminpw"
+  "ca.consumer.supervision.com":
+    "url": "https://192.168.48.128:7004"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIIC5zCCAoygAwIBAgIUXBDY/Ycry/rBVrGxGBx0z7RQ+i8wCgYIKoZIzj0EAwIw\ngYExCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEQMA4GA1UE\nBwwHUmFsZWlnaDEhMB8GA1UECgwYY29uc3VtZXIuc3VwZXJ2aXNpb24uY29tMSQw\nIgYDVQQDDBtjYS5jb25zdW1lci5zdXBlcnZpc2lvbi5jb20wHhcNMjIwOTAxMjIw\nNzA3WhcNMzIwODI5MjIwNzA3WjCBgTELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5v\ncnRoIENhcm9saW5hMRAwDgYDVQQHDAdSYWxlaWdoMSEwHwYDVQQKDBhjb25zdW1l\nci5zdXBlcnZpc2lvbi5jb20xJDAiBgNVBAMMG2NhLmNvbnN1bWVyLnN1cGVydmlz\naW9uLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABARdgrFtFFNHPLJMLm9r\nenyzZtTohZ0is8oyH/aCL9EWV/G6qoi8ZjMJaG7p/MxZyVZSZ6d5QmARD4UIevf/\nPzGjgd8wgdwwHQYDVR0OBBYEFPLuW0KFGe5Phy9FyMnEko1izMFIMB8GA1UdIwQY\nMBaAFPLuW0KFGe5Phy9FyMnEko1izMFIMA8GA1UdEwEB/wQFMAMBAf8wDgYDVR0P\nAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjBaBgNVHREE\nUzBRhwTAqDCAghtjYS5jb25zdW1lci5zdXBlcnZpc2lvbi5jb22CG2NhLWNvbnN1\nbWVyLXN1cGVydmlzaW9uLWNvbYIJbG9jYWxob3N0hwR/AAABMAoGCCqGSM49BAMC\nA0kAMEYCIQC6LV2KHKX8DX37qSDEThip6tvQCG4n4G8fwOFeohiBTwIhANzOy5Ff\n+r99TulOivXOlD3r3Qy5xSdGb5PlwCxoISow\n-----END CERTIFICATE-----"
+    "httpOptions":
+      "verify": "false"
+    "caName": "ca"
+    "registrar":
+      "enrollId": "admin"
+      "enrollSecret": "adminpw"

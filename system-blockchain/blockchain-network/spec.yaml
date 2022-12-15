@@ -1,0 +1,23 @@
+fabric:
+  orderers:
+    - "orderer.supervision.com"
+  cas:
+    - "ca.regulator.supervision.com"
+    - "ca.manufacturer.supervision.com"
+    - "ca.distributor.supervision.com"
+    - "ca.provider.supervision.com"
+    - "ca.consumer.supervision.com"
+  peers:
+    - "peer0.regulator.supervision.com"
+    - "peer0.manufacturer.supervision.com"
+    - "peer0.distributor.supervision.com"
+    - "peer0.provider.supervision.com"
+    - "peer0.consumer.supervision.com"
+  settings:
+    orderer:
+      FABRIC_LOGGING_SPEC: INFO
+    ca:
+      FABRIC_LOGGING_SPEC: INFO
+    peer:
+      FABRIC_LOGGING_SPEC: INFO
+  endpoint_address: 192.168.48.128

@@ -1,0 +1,11 @@
+####################################################
+# Configuration Properties about Backend Server
+####################################################
+server:
+  port: 9000
+
+spring:
+  profiles:
+    active: "resource, datasource, framework"
+
+captcha-type: "math"

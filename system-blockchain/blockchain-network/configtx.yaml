@@ -1,0 +1,239 @@
+---
+Organizations:
+  - &consumer-supervision-com
+      Name: consumer-supervision-com
+      ID: consumer-supervision-com
+      MSPDir: keyfiles/peerOrganizations/consumer.supervision.com/msp
+      Policies:
+        Readers:
+          Type: Signature
+          Rule: "OR('consumer-supervision-com.admin', 'consumer-supervision-com.peer', 'consumer-supervision-com.client')"
+        Writers:
+          Type: Signature
+          Rule: "OR('consumer-supervision-com.admin', 'consumer-supervision-com.client')"
+        Admins:
+          Type: Signature
+          Rule: "OR('consumer-supervision-com.admin')"
+        Endorsement:
+          Type: Signature
+          Rule: "OR('consumer-supervision-com.peer')"
+
+      AnchorPeers:
+      - Host: 192.168.48.128
+        Port: 7009
+  - &distributor-supervision-com
+      Name: distributor-supervision-com
+      ID: distributor-supervision-com
+      MSPDir: keyfiles/peerOrganizations/distributor.supervision.com/msp
+      Policies:
+        Readers:
+          Type: Signature
+          Rule: "OR('distributor-supervision-com.admin', 'distributor-supervision-com.peer', 'distributor-supervision-com.client')"
+        Writers:
+          Type: Signature
+          Rule: "OR('distributor-supervision-com.admin', 'distributor-supervision-com.client')"
+        Admins:
+          Type: Signature
+          Rule: "OR('distributor-supervision-com.admin')"
+        Endorsement:
+          Type: Signature
+          Rule: "OR('distributor-supervision-com.peer')"
+
+      AnchorPeers:
+      - Host: 192.168.48.128
+        Port: 7007
+  - &manufacturer-supervision-com
+      Name: manufacturer-supervision-com
+      ID: manufacturer-supervision-com
+      MSPDir: keyfiles/peerOrganizations/manufacturer.supervision.com/msp
+      Policies:
+        Readers:
+          Type: Signature
+          Rule: "OR('manufacturer-supervision-com.admin', 'manufacturer-supervision-com.peer', 'manufacturer-supervision-com.client')"
+        Writers:
+          Type: Signature
+          Rule: "OR('manufacturer-supervision-com.admin', 'manufacturer-supervision-com.client')"
+        Admins:
+          Type: Signature
+          Rule: "OR('manufacturer-supervision-com.admin')"
+        Endorsement:
+          Type: Signature
+          Rule: "OR('manufacturer-supervision-com.peer')"
+
+      AnchorPeers:
+      - Host: 192.168.48.128
+        Port: 7006
+  - &provider-supervision-com
+      Name: provider-supervision-com
+      ID: provider-supervision-com
+      MSPDir: keyfiles/peerOrganizations/provider.supervision.com/msp
+      Policies:
+        Readers:
+          Type: Signature
+          Rule: "OR('provider-supervision-com.admin', 'provider-supervision-com.peer', 'provider-supervision-com.client')"
+        Writers:
+          Type: Signature
+          Rule: "OR('provider-supervision-com.admin', 'provider-supervision-com.client')"
+        Admins:
+          Type: Signature
+          Rule: "OR('provider-supervision-com.admin')"
+        Endorsement:
+          Type: Signature
+          Rule: "OR('provider-supervision-com.peer')"
+
+      AnchorPeers:
+      - Host: 192.168.48.128
+        Port: 7008
+  - &regulator-supervision-com
+      Name: regulator-supervision-com
+      ID: regulator-supervision-com
+      MSPDir: keyfiles/peerOrganizations/regulator.supervision.com/msp
+      Policies:
+        Readers:
+          Type: Signature
+          Rule: "OR('regulator-supervision-com.admin', 'regulator-supervision-com.peer', 'regulator-supervision-com.client')"
+        Writers:
+          Type: Signature
+          Rule: "OR('regulator-supervision-com.admin', 'regulator-supervision-com.client')"
+        Admins:
+          Type: Signature
+          Rule: "OR('regulator-supervision-com.admin')"
+        Endorsement:
+          Type: Signature
+          Rule: "OR('regulator-supervision-com.peer')"
+
+      AnchorPeers:
+      - Host: 192.168.48.128
+        Port: 7005
+  - &supervision-com
+      Name: supervision-com
+      ID: supervision-com
+      MSPDir: keyfiles/ordererOrganizations/supervision.com/msp
+      Policies:
+        Readers:
+          Type: Signature
+          Rule: "OR('supervision-com.member')"
+        Writers:
+          Type: Signature
+          Rule: "OR('supervision-com.member')"
+        Admins:
+          Type: Signature
+          Rule: "OR('supervision-com.admin')"
+
+Capabilities:
+  Channel: &ChannelCapabilities
+    V2_0: true
+
+  Orderer: &OrdererCapabilities
+    V2_0: true
+
+  Application: &ApplicationCapabilities
+    V2_0: true
+
+Application: &ApplicationDefaults
+  Organizations:
+  Policies:
+    Readers:
+      Type: ImplicitMeta
+      Rule: "ANY Readers"
+    Writers:
+      Type: ImplicitMeta
+      Rule: "ANY Writers"
+    Admins:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Admins"
+    LifecycleEndorsement:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Endorsement"
+    Endorsement:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Endorsement"
+
+  Capabilities:
+    <<: *ApplicationCapabilities
+
+Orderer: &OrdererDefaults
+  OrdererType: etcdraft
+
+  BatchTimeout: 2s
+
+  BatchSize:
+    MaxMessageCount: 10
+    AbsoluteMaxBytes: 99 MB
+    PreferredMaxBytes: 512 KB
+
+  Addresses:
+  - 192.168.48.128:7015
+  EtcdRaft:
+    Consenters:
+    - Host: 192.168.48.128
+      Port: 7015
+      ClientTLSCert: keyfiles/ordererOrganizations/supervision.com/orderers/orderer.supervision.com/tls/server.crt
+      ServerTLSCert: keyfiles/ordererOrganizations/supervision.com/orderers/orderer.supervision.com/tls/server.crt
+  Organizations:
+  Policies:
+    Readers:
+      Type: ImplicitMeta
+      Rule: "ANY Readers"
+    Writers:
+      Type: ImplicitMeta
+      Rule: "ANY Writers"
+    Admins:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Admins"
+    BlockValidation:
+      Type: ImplicitMeta
+      Rule: "ANY Writers"
+
+Channel: &ChannelDefaults
+  Policies:
+    Readers:
+      Type: ImplicitMeta
+      Rule: "ANY Readers"
+    Writers:
+      Type: ImplicitMeta
+      Rule: "ANY Writers"
+    Admins:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Admins"
+
+  Capabilities:
+    <<: *ChannelCapabilities
+
+Profiles:
+  OrgChannel:
+    Consortium: SampleConsortium
+    <<: *ChannelDefaults
+    Application:
+      <<: *ApplicationDefaults
+      Organizations:
+      - *consumer-supervision-com
+      - *distributor-supervision-com
+      - *manufacturer-supervision-com
+      - *provider-supervision-com
+      - *regulator-supervision-com
+      Capabilities:
+        <<: *ApplicationCapabilities
+
+  OrdererGenesis:
+    <<: *ChannelDefaults
+    Capabilities:
+      <<: *ChannelCapabilities
+    Orderer:
+      <<: *OrdererDefaults
+      Organizations:
+      - *supervision-com
+      Capabilities:
+        <<: *OrdererCapabilities
+    Application:
+      <<: *ApplicationDefaults
+      Organizations:
+      - <<: *supervision-com
+    Consortiums:
+      SampleConsortium:
+        Organizations:
+        - *consumer-supervision-com
+        - *distributor-supervision-com
+        - *manufacturer-supervision-com
+        - *provider-supervision-com
+        - *regulator-supervision-com

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.server_framework.web.rbac.mapper.UserMapper">
+    <resultMap id="UserResult" type="User">
+        <id property="id" column="id"/>
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+        <result property="displayName" column="display_name"/>
+        <result property="deptId" column="dept_id"/>
+        <result property="deptName" column="dept_name"/>
+        <result property="deptType" column="dept_type"/>
+        <result property="email" column="email"/>
+        <result property="phone" column="phone"/>
+        <result property="status" column="status"/>
+        <result property="createTime" column="create_time"/>
+        <result property="creator" column="creator"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="updater" column="updater"/>
+    </resultMap>
+
+    <select id="selectUserById" resultMap="UserResult">
+        SELECT * FROM ss_user WHERE id = #{id}
+    </select>
+
+    <select id="selectUserByUsername" resultMap="UserResult">
+        SELECT * FROM ss_user WHERE username = #{username}
+    </select>
+
+    <select id="selectUsersByDept" resultMap="UserResult">
+        SELECT * FROM ss_user WHERE deptId = #{deptId} AND deptName = #{deptName}
+    </select>
+
+    <select id="selectUsersAll" resultMap="UserResult">
+        SELECT * FROM ss_user
+    </select>
+
+    <select id="selectEnabledUsers" resultMap="UserResult">
+        SELECT * FROM ss_user WHERE status = 0
+    </select>
+
+    <select id="selectDisabledUsers" resultMap="UserResult">
+        SELECT * FROM ss_user WHERE status = 1
+    </select>
+
+    <select id="selectDeletedUsers" resultMap="UserResult">
+        SELECT * FROM ss_user WHERE status = 2
+    </select>
+
+    <insert id="insertUser" parameterType="User" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO ss_user (dept_id, username, password, display_name, email, phone,
+                             status, create_time, creator)
+                    values (#{deptId}, #{username}, #{password}, #{displayName}, #{email}, #{phone},
+                            0, sysdate(), #{creator})
+    </insert>
+
+    <update id="updateUser" parameterType="User">
+        UPDATE ss_user SET dept_id = #{deptId}, username = #{username}, password = #{password},
+                            display_name = #{displayName}, email = #{email},
+                            phone = #{phone}, status = #{status},
+                            update_time = sysdate(), updater = #{updater}
+                        WHERE id = #{id}
+    </update>
+
+    <update id="deleteUserById">
+        UPDATE ss_user SET status = 1 WHERE id = #{id}
+    </update>
+
+    <update id="updatePasswordByUsername">
+        UPDATE ss_user SET password = #{password} WHERE username = #{username};
+    </update>
+
+    <update id="updateStatusByUsername">
+        UPDATE ss_user SET status = #{status} WHERE username = #{username}
+    </update>
+</mapper>
+
